@@ -32,17 +32,17 @@ keys, no costs.
 
 ## Run it
 
-### On this PC
+### Locally on a computer
 
 ```bash
-cd "C:/Users/shehr/Desktop/FM Scanner" && python -m http.server 8741
+cd fm-finder && python -m http.server 8741
 ```
 
 Then open <http://localhost:8741>. (A plain double-click on `index.html` also
 works, except the GPS button — browsers only allow geolocation on
 `localhost`/HTTPS.)
 
-### On your Pixel 9 — option A: free hosting (recommended)
+### On a phone — option A: free hosting (recommended)
 
 Push these files to a GitHub repo and enable **GitHub Pages**
 (Settings → Pages → deploy from branch). You get a free HTTPS URL; open it in
@@ -50,10 +50,10 @@ Chrome and use **Add to Home screen** to install it like an app. GPS works
 because Pages is HTTPS. Only files needed: `index.html`, `style.css`, `app.js`,
 `stations.js`, `manifest.json`.
 
-### On your Pixel 9 — option B: fully local
+### On a phone — option B: fully local
 
-Install [Termux](https://f-droid.org/packages/com.termux/), copy the five files
-above to the phone, then:
+Install [Termux](https://f-droid.org/packages/com.termux/) (Android), copy the
+five files above to the phone, then:
 
 ```bash
 pkg install python && cd fm-finder && python -m http.server 8741
